@@ -1,0 +1,40 @@
+{
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://vk.com/*"],
+      "js": ["js/mixtape.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "commands": {
+    "activate": {
+      "suggested_key": {
+        "default": "Alt+Q",
+        "mac": "Alt+Q"
+      },
+      "description": "Activate"
+    },
+    "settings": {
+      "suggested_key": {
+        "default": "Alt+W",
+        "mac": "Alt+W"
+      },
+      "description": "Open Settings"
+    }
+  },
+  "icons": {
+    "48": "icon/48.png"
+  },
+  "manifest_version": 2,
+  "name": "VK MIXTAPE",
+  "description": "Не помечать прочитанными, и не оповещать что набираете сообщения ВКонтакте.",
+  "options_ui": {
+    "open_in_tab": true,
+  	"page": "options.html"
+  },
+  "permissions": [ "storage", "webRequest", "webRequestBlocking", "*://vk.com/", "tabs", "activeTab" ],
+  "version": "1.0"
+}

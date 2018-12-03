@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VK MIXTAPE</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+  <script src="js/options.js"></script>
+  <style>
+    body{font-family:Montserrat,sans-serif;background:#c1c1c1}
+    input[type=checkbox]{height:0;width:0;display:none}
+    label{vertical-align:middle;cursor:pointer;text-indent:-9999px;width:37px;height:19px;background:#adadad;display:inline-block;border-radius:100px;position:relative}
+    label:after{content:'';position:absolute;top:5px;left:5px;width:10px;height:10px;background:white;border-radius:90px;transition:.3s}
+    input:checked+label{background:#673AB7}
+    input:checked+label:after{left:calc(100% - 5px);transform:translateX(-100%)}
+    span{font-size:13px;padding:4px;display:inline-block;vertical-align:middle}
+    button{outline:0;font-family:inherit;background:#4CAF50;border:0;padding:5px 12px;color:white;margin:15px 5px 5px;border-radius:2px;cursor:pointer;opacity:1;transition:opacity .4s}
+    button:hover{opacity:.9}
+    main{position:absolute;margin:auto;top:0;right:0;bottom:0;left:0;width:400px;height:160px;background:#fff;padding:10px;border-radius:8px}
+    header{font-size:15px;padding:10px;margin-bottom:12px}
+    header img{vertical-align:middle;margin-right:8px}
+  </style>
+</head>
+<body>
+  <main>
+    <header><img src="icon/48.png" style="width: 30px"> VK MIXTAPE</header>
+    <span><input type="checkbox" id="read" /><label for="read"></label></span> <span>Не прочитывать сообщения</span><br />
+    <span><input type="checkbox" id="typing" /><label for="typing"></label></span> <span>Не отправлять статус набора сообщения</span><br />
+    <button id="save">Сохранить</button>
+  </main>
+</body>
+</html>
